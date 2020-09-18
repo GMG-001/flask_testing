@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bootstrap Checkout Form</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form action="">
+<div class="container">
+
+  <div class="py-5 text-center">
+    <h2>მიწოდება</h2>
+  </div>
+
+<!--  <div class="row">-->
+    <div class="col-md-4 order-md-2 mb-4">
+    </div>
+<!--    <div class="col-md-8 order-md-1">-->
+      <h4 class="mb-3">მიწოდების პირობები</h4>
+<!--      <form class="needs-validation" novalidate>-->
+
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label green" for="customRadio1">მიტანა ადგილზე</label>
+          <hr class="mb-4">
+          <div class="reveal-if-active" data-require-pair="#customRadio1">
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="region">რეგიონი</label>
+                <select class="custom-select d-block w-100" id="region">
+                  <option value="" disabled selected>აირჩიე...</option>
+                  <option value="38">აბაშა</option>
+                  <option value="66">ადიგენი</option>
+                  <option value="51">ამბროლაური</option>
+                  <option value="57">ასპინძა</option>
+                  <option value="27">ახალქალაქი</option>
+                  <option value="17">ახალციხე</option>
+                  <option value="30">ახმეტა</option>
+                  <option value="3">ბათუმი</option>
+                  <option value="46">ბაღდათი</option>
+                  <option value="26">ბოლნისი</option>
+                  <option value="20">ბორჯომი</option>
+                  <option value="23">გარდაბანი</option>
+                  <option value="7">გორი</option>
+                  <option value="25">გურჯაანი</option>
+                  <option value="32">დედოფლისწყარო</option>
+                  <option value="49">დმანისი</option>
+                  <option value="34">დუშეთი</option>
+                  <option value="44">ვალე</option>
+                  <option value="47">ვანი</option>
+                  <option value="11">ზესტაფონი</option>
+                  <option value="5">ზუგდიდი</option>
+                  <option value="1">თბილისი</option>
+                  <option value="48">თეთრი წყარო</option>
+                  <option value="12">თელავი</option>
+                  <option value="43">თერჯოლა</option>
+                  <option value="58">თიანეთი</option>
+                  <option value="16">კასპი</option>
+                  <option value="37">ლაგოდეხი</option>
+                  <option value="31">ლანჩხუთი</option>
+                  <option value="56">ლენტეხი</option>
+                  <option value="14">მარნეული</option>
+                  <option value="41">მარტვილი</option>
+                  <option value="55">მესტია</option>
+                  <option value="33">მცხეთა</option>
+                  <option value="39">ნინოწმინდა</option>
+                  <option value="13">ოზურგეთი</option>
+                  <option value="50">ონი</option>
+                  <option value="4">რუსთავი</option>
+                  <option value="22">საგარეჯო</option>
+                  <option value="8">სამტრედია</option>
+                  <option value="36">საჩხერე</option>
+                  <option value="10">სენაკი</option>
+                  <option value="52">სიღნაღი</option>
+                  <option value="59">სტეფანწმინდა</option>
+                  <option value="21">ტყიბული</option>
+                  <option value="6">ფოთი</option>
+                  <option value="35">ქარელი</option>
+                  <option value="61">ქედა</option>
+                  <option value="18">ქობულეთი</option>
+                  <option value="2">ქუთაისი</option>
+                  <option value="28">ყვარელი</option>
+                  <option value="62">შუახევი</option>
+                  <option value="60">ჩოხატაური</option>
+                  <option value="65">ჩხოროწყუ</option>
+                  <option value="53">ცაგერი</option>
+                  <option value="29">წალენჯიხა</option>
+                  <option value="54">წალკა</option>
+                  <option value="40">წნორი</option>
+                  <option value="19">წყალტუბო</option>
+                  <option value="15">ჭიათურა</option>
+                  <option value="67">ხარაგაული</option>
+                  <option value="9">ხაშური</option>
+                  <option value="64">ხელვაჩაური</option>
+                  <option value="42">ხობი</option>
+                  <option value="24">ხონი</option>
+                  <option value="63">ხულო</option>
+                  <option value="45">ჯვარი</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="address">მისამართი</label>
+              <input type="text" class="form-control" id="address">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label green" for="customRadio2">გატანა ფილიალიდან</label>
+
+
+
+          <hr class="mb-4">
+        <div class="reveal-if-active" data-require-pair="#customRadio2">
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="branch">ფილიალი</label>
+              <select class="custom-select d-block w-100" id="branch">
+                <option value="" disabled selected>აირჩიე...</option>
+                <option value="38">ფილიალი1</option>
+                <option value="66">ფილიალი2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+<div class="form-group button"> <input value="გაგრძელება" type="submit" class="btn btn-outline-success btn-lg form-control" style="font-size: .8rem;"> </div>
+</form>
+</div>
+<!-- partial -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

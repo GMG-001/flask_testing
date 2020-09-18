@@ -1,0 +1,16 @@
+{%  extends 'base.html' %}
+ {% block title %} კოვიდ_19 {%  endblock %}
+
+{% block content %}
+<br>
+<h3>Add Book</h3>
+    <form method="post" style="width:50%; margin-left: 10px">
+      <div class="form-group">
+        <input type="text" name="location" class="form-control" placeholder="location"><br>
+        <input type="text" name="date" class="form-control" placeholder="date"><br>
+		<input type="text" name="total_cases" class="form-control"  placeholder="total_cases"><br>
+		<input type="text" name="new_cases" class="form-control"  placeholder="new_cases"><br>
+      </div>
+    <button type="submit" class="btn btn-primary">შემთხვევის დამატება</button>
+    </form>
+{% endblock %}

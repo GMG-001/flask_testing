@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Status</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .battery {
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%;
+            position: absolute;
+            border-radius: 25px 25px 10px 10px;
+            background: white;
+        }
+
+        .battery:after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 27px;
+            background: white;
+            position: absolute;
+            top: -30px;
+            left: 25%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .battery #batteryLevel {
+            width: 100%;
+            height: 0%;
+            background: chartreuse;
+            border-radius: 0 0 10px 10px;
+            position: absolute;
+            bottom: 0px;
+            transition: all 3s;
+            overflow: hidden;
+        }
+
+        .battery #percentageLevel {
+            display: block;
+            width: 30%;
+            height: 15%;
+            background: gold;
+            position: relative;
+            top: 25%;
+            left: 25%;
+            border-radius: 50%;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="battery">
+        <div id="batteryLevel"></div>
+        <span id="percentageLevel"></span>
+    </div>
+
+    <script>
+        var batteryLevel = document.getElementById("batteryLevel");
+        var styleBatteryLevel = batteryLevel.style;
+        var percentageLevel = document.getElementById("percentageLevel");
+        navigator.getBattery().then(function (battery) {
+
+            function updateAllBatteryInfo() {
+                updateLevelInfo();
+            }
+
+            updateAllBatteryInfo();
+            battery.addEventListener('levelchange', function () {
+
+                setInterval(function () {
+                    updateLevelInfo()
+                }, 1000);
+            });
+
+            function updateLevelInfo() {
+
+                var numBattery = battery.level * 100;
+                percentageLevel.textContent = Math.ceil(numBattery) + "%";
+
+                styleBatteryLevel.height = numBattery + "%";
+                if (numBattery <= 15) {
+                    styleBatteryLevel.background = "red";
+                    alert("Connect charger your battery is very low!!")
+                }
+
+                if (numBattery == 100) {
+                    styleBatteryLevel.background = "limegreen";
+                    alert("Remove your charger\nYour device is fully charged!!")
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>

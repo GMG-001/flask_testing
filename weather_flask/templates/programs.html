@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+პროგრამები
+{% endblock %}
+
+
+{% block content %}
+<ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link active" href="https://www.proservice.ge/">proservice.ge</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.ucoz.com/">ucoz.com</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://www.000webhost.com/">000webhost.com</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://www.python.org/">www.python.org</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://www.bluehost.com/">bluehost.com</a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ url_for('home') }}">მთავარი გვერდი</a>
+    </li>
+  </ul>
+{% endblock %}

@@ -1,0 +1,24 @@
+body{
+	background-image: url(https://www.technobezz.com/files/uploads/2017/07/Cool-Wallpapers-HD.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gio{
+	border:2px solid red ;
+	background-size: 2px;
+}
+ul li{
+	color: green;
+	font-size: medium;
+}
+button{
+	color: black;
+	background-image: url(https://www.technobezz.com/files/uploads/2017/07/Cool-Wallpapers-HD.jpg);
+	border: none;
+}
+iframe{
+	margin-left: 30%;
+	border: 2px solid red;
+	float: center;
+}
