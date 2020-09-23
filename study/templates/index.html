@@ -2,7 +2,7 @@
 <html>
 	<head>
     <title> {% block title %} Welcome {% endblock %} </title>
-		<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/static/style.css">
 	</head>
 	<body>
 		<table>
@@ -28,5 +28,6 @@
 				<li><a href="https://www.facebook.com/giorgi.megrelishvili.583"> ფბ გვერდი</a></li>
 			</ul>
 		</footer>
+		    {% block content %} {% endblock %}
 	</body>
 </html>
