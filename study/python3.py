@@ -1,17 +1,23 @@
-import requests
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, redirect, url_for, request, session
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    # url='api.openweathermap.org/data/2.5/weather?q={}&appid={your api key}'
-    # city='Las Vegas'
-    # r=requests.get(url.format(city)).json
 
+@app.route('/')
+def home():
     return render_template('index.html')
 
+@app.route('/first')
+def first():
+    return render_template('first.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/registration')
+def registration():
+    return render_template('registration.html')
 
 if __name__=='__main__':
     app.run(debug=True)
