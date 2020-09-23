@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<head>
-    <title> {% block title %} Welcome {% endblock %} </title>
-	<link rel="stylesheet" href="/static/style.css">
-	</head>
-	<body>
-		<table>
-			<tr>
-				<td>
-					<button><a href="https://www.youtube.com/">იუთუბი</a></button>
-				</td>
-				<td><button><a href="http://127.0.0.1:5000/first"> შემდეგი</a></button></td>
-				<td><button><a href="http://127.0.0.1:5000/registration"> რეგისტრაცია</a></button></td>
-			</tr>
-		</table>
-		<!-- <ul>
-			<li><a href="#">home page</a></li>
-			<li><a href="#"> about</a></li>
-		</ul> -->
+{%  extends 'base.html' %}
+
+{% block content %}
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/Gbw8h-I3QGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<div>
 			<img src="https://images.unsplash.com/photo-1525389999255-82bad487f23c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="gio" >
 		</div>
-		<footer>
-			<h3>კონტაქტი</h3>
-			<ul>
-				<li><a href="https://www.facebook.com/giorgi.megrelishvili.583"> ფბ გვერდი</a></li>
-			</ul>
-		</footer>
-		    {% block content %} {% endblock %}
-	</body>
-</html>
+{% endblock %}

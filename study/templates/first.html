@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>first</title>
-		<link rel="stylesheet" href="/static/style.css">
-	</head>
-	<body>
+{% extends 'base.html' %}
+{% block content %}
+	<link rel="stylesheet" href="/static/style.css">
+
 <h1>კეთილი იყოს თქვენი მობრძანება</h1>
 <p><hr>ჰეი ჯიგარო ეს არის ტესტირება, როგორხარ როგორ მიდის საქმეები</p>
 <ul>
 	<li><a href="http://127.0.0.1:5000/"> მთავარი გვერდი</a></li>
 </ul>
-	</body>
-</html>
+{% endblock content %}
